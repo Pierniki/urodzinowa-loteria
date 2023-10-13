@@ -25,6 +25,7 @@ export const TimedConfetti = () => {
       width={windowSize.width}
       height={windowSize.height}
       numberOfPieces={pieces}
+      style={{ position: "fixed" }}
     />
   );
 };

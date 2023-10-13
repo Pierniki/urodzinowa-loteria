@@ -5,7 +5,7 @@ import cn from "classnames";
 import { TimedConfetti } from "./TimedConfetti";
 import { Timer } from "./Timer";
 
-const seed = "2137"; // You can use any seed value you like
+const seed = "420420420"; // You can use any seed value you like
 const targetDate = new Date("October 14, 2023 21:37:00");
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
   const [isTime, setIsTime] = useState(false);
 
   return (
-    <div className=" text-white mx-auto flex justify-center items-center flex-col py-8 max-w-[360px] text-center px-2 gap-4">
-      <h1 className="text-xl">
+    <div className=" text-white mx-auto flex justify-center items-center flex-col max-w-[360px] text-center px-2 gap-4">
+      <h1 className="text-xl mt-8">
         Polityczna loteria urodzinowa im. Wiktorii Lisieckiej
       </h1>
       {!isTime && (
@@ -37,11 +37,15 @@ function App() {
               <div className="text-left">
                 {isTime ? shuffledArray[idx] : "???"}
               </div>
-              <div className="text-right">{reward}</div>
+              <div className="text-right text-sm">{reward}</div>
             </li>
           );
         })}
       </ul>
+      <span className=" text-xs text-gray-800 py-4">
+        Dokładne informacje o maksymalnym czasie odbioru/czasie waźności danej
+        nagrody u mnie
+      </span>
     </div>
   );
 }
